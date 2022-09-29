@@ -16,18 +16,7 @@ class MedicoListCreateView(generics.ListCreateAPIView):
         serializer = MedicoSerializer(queryset, many=True)
         return Response(serializer.data)
 
-    def post(self, request, *args, **kwargs):
-        print("POST a Medico")
-        usuarioData = request.data.pop('usuario')
-        serializerU  = UsuarioSerializer(data=usuarioData)
-        serializerU.is_valid(raise_exception=True)
-        usuario = serializerU.save()
-        enfData = request.data   
-        enfData.update({"usuario":usuario.id})
-        serializerEnf = MedicoSerializer(data=enfData)
-        serializerEnf.is_valid(raise_exception=True)
-        serializerEnf.save()
-        return Response(status=status.HTTP_201_CREATED)
+    
 
         """ tokenData = {
                      "username":request.data["username"],
@@ -35,7 +24,6 @@ class MedicoListCreateView(generics.ListCreateAPIView):
                     }
         tokenSerializer = TokenObtainPairSerializer(data=tokenData)
         tokenSerializer.is_valid(raise_exception=True)
-
         return Response(tokenSerializer.validated_data, status=status.HTTP_201_CREATED) """
 
 class MedicoRetrieveUpdateView(generics.RetrieveUpdateAPIView):

@@ -97,10 +97,10 @@ WSGI_APPLICATION = "hospitalBaja.wsgi.application"
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd68iptp6pagsqp',
-        'USER': 'uklfdmjyzkbste',
-        'PASSWORD': 'e0e90f8becb3da9a440bb996476aac4a768a4a19e258faaf393d8c0ae39149f8',
-        'HOST': 'ec2-54-91-223-99.compute-1.amazonaws.com',
+        'NAME': 'd12l5e917uo1ht',
+        'USER': 'syxgpwxzhvsbjr',
+        'PASSWORD': 'e80f72fe824c94a816203c099a0882b05d57b4a0bcf78409a230cd35970ce09f',
+        'HOST': 'ec2-44-209-57-4.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }

@@ -1,8 +1,9 @@
 from django.db import models
 from .usuario import Usuario
+from .medico import Medico
 
-class Medico(models.Model):
+
+class Paciente(models.Model):
     id=models.AutoField(primary_key=True)
     usuario=models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    especialidad=models.CharField(max_length=45)
-    registro = models.CharField(max_length=20)
+    medico=models.ForeignKey(Medico, on_delete=models.CASCADE)
