@@ -5,4 +5,4 @@ from hospitalBajaApp.models.paciente import Paciente
 class PacienteSerializer(serializers.ModelSerializer):
     class Meta:
         model=Paciente
-        fields=('usuario','medico')
+        fields=('usuario','medico','f_cardiaca','temperatura','p_arterial','oximetria')
